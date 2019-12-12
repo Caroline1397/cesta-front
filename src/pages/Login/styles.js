@@ -2,18 +2,20 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   *{
-    margin-top: 5px;
+    margin: 0;
     color:  #003333;
+  }
+  .img{
+    align-items: center;
   }
   div{
     text-align: center;
     font-size: 1.3em;
-    margin-bottom: 10px;
    }
   section{
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 330px;
     width: 370px;
     padding: 30px; 
     border-radius: 20px;
@@ -45,7 +47,7 @@ export const Container = styled.div`
    }
   @media (max-width: 600px) {
     section{
-    height: 320px;
+    height: 340px;
     width: 330px;
     }
     input{
@@ -58,6 +60,7 @@ export const Container = styled.div`
   @media (max-width: 400px) {
     section{
     width: 270px;
+    height: 330px;
     }
     input{
     width: 260px;
@@ -68,7 +71,7 @@ export const Container = styled.div`
   }
   @media (max-width: 330px) {
     section{
-    height: 300px;
+    height: 330px;
     width: 220px;
     }
     input{

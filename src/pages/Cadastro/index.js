@@ -7,6 +7,8 @@ export default function Cadastro({ history }) {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    const [admin, setAdmin] = useState(false);
+
     async function handleSubmit(event) {
       event.preventDefault()
       try {
@@ -17,7 +19,7 @@ export default function Cadastro({ history }) {
         })
         history.push("/")
       } catch (erro) {
-        console.log("Este usuário ja existe");
+        console.log("Este usuário já existe");
       }
     }
     return (

@@ -1,18 +1,20 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import Route from './Route';
+import Cadastro from '../pages/Cadastro';
+import Login from '../pages/Login';
+import Administrar from '../pages/Administrar';
+import Home from '../pages/Home';
 
-export const PrivateRoute = ({component: Component, ...rest}) => (
-  <Route
-    {...rest}
-    render={props => localStorage.getItem("@CESTA/token")
-        ? (
-          <Component {...props} />
-        )
-        : (
-          <Redirect
-            to={{pathname: "/",state: {from: props.location},}}
-          />
-        )
-    }
-  />
-);
+export default function Routes() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Login} />
+        <Route path="/home" component={Home} />
+        <Route path="/cadastro" component={Cadastro}/>
+        <Route path="/administrar" component={Administrar} isPrivate />
+      </Switch>
+    </BrowserRouter>
+  );
+}

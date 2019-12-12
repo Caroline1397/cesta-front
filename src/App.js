@@ -1,7 +1,7 @@
 import React from 'react';
 
+import Routes from "./routes/route";
 import GlobalStyle from "./styles/global";
-import Routes from "../src/routes/routes";
 
 function App() {
   return (
